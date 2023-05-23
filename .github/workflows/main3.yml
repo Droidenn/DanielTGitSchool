@@ -28,12 +28,12 @@ jobs:
         run: |
           SET CGO_ENABLED=0
           SET GOOS=windows
-          SET GOARCH=arm64
+          SET GOARCH=amd64
           go build -o endpoint -o build/endpoint main.go
      
       - name: Build Docker image
         run: |
-          docker build -t endpoint:1.0.0 --build-arg GOOS=windows --build-arg GOARCH=arm64 .
+          docker build -t endpoint:1.0.0 --build-arg GOOS=windows --build-arg GOARCH=amd64 .
      
       - name: Run application with Go
         run: go run main.go
