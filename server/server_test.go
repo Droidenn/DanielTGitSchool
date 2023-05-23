@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"syscall"
 	"testing"
 	"time"
 
